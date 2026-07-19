@@ -49,7 +49,7 @@ a:focus-visible{outline:2px solid var(--garnet);outline-offset:2px}
 /* Sections / page headings */
 section{margin-top:44px}
 h2{
-  font-size:14px;text-transform:uppercase;letter-spacing:0.18em;
+  font-size:16px;text-transform:uppercase;letter-spacing:0.18em;
   color:var(--garnet);font-weight:600;margin:0 0 22px;
   padding-bottom:8px;border-bottom:1px solid var(--rule);
 }
@@ -179,7 +179,7 @@ footer{margin-top:80px;font-size:14px;color:var(--muted);text-align:center}
   header h1{font-size:36px}
   header .aff{font-size:21px}
   header .contact{font-size:15px;line-height:1.9}
-  h2{font-size:13px;letter-spacing:0.16em}
+  h2{font-size:15px;letter-spacing:0.16em}
   .portrait{float:none;width:100%;max-width:220px;margin:0 auto 18px}
   .bio p.below{clear:none}
   .cv-row{grid-template-columns:1fr;gap:2px}
