@@ -84,7 +84,7 @@ h3.sub:first-of-type{margin-top:0}
 
 /* Papers */
 .paper{margin-bottom:18px}
-.paper .title{font-weight:500}
+.paper .title{font-weight:500;line-height:1.25}
 .paper .title a{color:inherit;border-bottom:0;text-decoration:none}
 .paper .title a:hover{color:var(--garnet)}
 .paper .auth a{color:inherit;border-bottom:1px solid rgba(161,24,51,.35)}
