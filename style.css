@@ -159,10 +159,13 @@ ul.bare li{margin-bottom:12px}
 .course .offered{color:var(--muted);font-style:italic;font-size:16px;margin:8px 0 0}
 
 /* Students placement list */
-.placement .pl-row{display:grid;grid-template-columns:58px 1fr;gap:18px;padding:9px 0;border-top:1px solid var(--rule);line-height:1.5}
+.placement .pl-row{display:grid;grid-template-columns:58px 1fr;gap:20px;padding:12px 0;border-top:1px solid var(--rule);line-height:1.55}
 .placement .pl-row:first-child{border-top:0}
 .placement .yr{color:var(--garnet);font-variant-numeric:tabular-nums}
 .placement .pl{color:var(--ink)}
+.placement .pl > div{margin-bottom:5px}
+.placement .pl > div:last-child{margin-bottom:0}
+.placement .inst{color:var(--muted)}
 @media (max-width:560px){ .placement .pl-row{grid-template-columns:1fr;gap:2px} .placement .yr{font-weight:600} }
 
 /* Contact block (home page) */
