@@ -166,6 +166,7 @@ ul.bare li{margin-bottom:12px}
 .placement .pl > div{margin-bottom:5px}
 .placement .pl > div:last-child{margin-bottom:0}
 .placement .inst{color:var(--muted)}
+.placement .adv{color:var(--muted);font-size:13.5px}
 .placement a{color:inherit;border-bottom:1px solid rgba(161,24,51,.35)}
 .placement a:hover{color:var(--garnet);border-bottom-color:var(--garnet)}
 @media (max-width:560px){ .placement .pl-row{grid-template-columns:1fr;gap:2px} .placement .yr{font-weight:600} }
