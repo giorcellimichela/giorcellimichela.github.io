@@ -85,6 +85,8 @@ h3.sub:first-of-type{margin-top:0}
 /* Papers */
 .paper{margin-bottom:18px}
 .paper .title{font-weight:500}
+.paper .title a{color:inherit;border-bottom:0;text-decoration:none}
+.paper .title a:hover{color:var(--garnet)}
 .paper .meta{color:var(--muted);font-style:italic;font-size:17px;margin-top:2px}
 .paper .extras{margin-top:4px;font-size:15.5px;color:var(--muted)}
 .paper .extras a{font-style:italic}
