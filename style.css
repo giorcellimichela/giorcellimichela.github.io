@@ -53,7 +53,7 @@ h2{
   color:var(--garnet);font-weight:600;margin:0 0 22px;
   padding-bottom:8px;border-bottom:1px solid var(--rule);
 }
-h3.sub{font-size:13px;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink);font-weight:600;margin:32px 0 14px;scroll-margin-top:20px}
+h3.sub{font-size:15px;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink);font-weight:600;margin:34px 0 16px;scroll-margin-top:20px}
 
 /* Nav dropdown (Research) */
 .topnav .dropdown{position:relative;display:inline-block}
