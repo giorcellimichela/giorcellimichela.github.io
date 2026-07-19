@@ -1,0 +1,182 @@
+/* ============================================================
+   Michela Giorcelli — academic website (Creanza-style)
+   Shared styles for every page. EB Garamond, crimson accent,
+   centered masthead, narrow column.
+   ============================================================ */
+:root{
+  --garnet:#A11833;
+  --ink:#1a1a1a;
+  --muted:#5a5a5a;
+  --rule:#d8c9cc;
+  --paper:#fbfaf7;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"EB Garamond", Georgia, serif;
+  font-size:19px;line-height:1.55;
+  color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  overflow-wrap:break-word;
+}
+.wrap{max-width:740px;margin:0 auto;padding:36px 28px 120px}
+
+/* Top nav: centered, hairline below */
+.topnav{
+  text-align:center;font-size:17px;
+  padding-bottom:16px;border-bottom:1px solid var(--rule);margin-bottom:44px;
+}
+.topnav a{
+  color:var(--ink);text-decoration:none;border-bottom:0;
+  margin:0 16px;font-weight:400;display:inline-block;
+}
+.topnav a:hover{color:var(--garnet)}
+.topnav a.active{color:var(--garnet);font-weight:600}
+
+/* Masthead (name / title / contact) */
+header{text-align:center;margin-bottom:12px}
+header h1{font-size:46px;font-weight:500;letter-spacing:-0.01em;margin:0 0 12px}
+header h1 a{color:var(--garnet);text-decoration:none;border-bottom:0}
+header .aff{margin:0;font-size:26px;color:var(--ink);font-weight:500}
+header .contact{margin-top:16px;font-size:16px;color:var(--muted)}
+header .contact a{color:var(--garnet)}
+
+/* Body links */
+a{color:var(--garnet);text-decoration:none;border-bottom:1px solid rgba(161,24,51,0.25)}
+a:hover{border-bottom-color:var(--garnet)}
+a:focus-visible{outline:2px solid var(--garnet);outline-offset:2px}
+
+/* Sections / page headings */
+section{margin-top:44px}
+h2{
+  font-size:14px;text-transform:uppercase;letter-spacing:0.18em;
+  color:var(--garnet);font-weight:600;margin:0 0 22px;
+  padding-bottom:8px;border-bottom:1px solid var(--rule);
+}
+h3.sub{font-size:13px;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink);font-weight:600;margin:32px 0 14px;scroll-margin-top:20px}
+
+/* Nav dropdown (Research) */
+.topnav .dropdown{position:relative;display:inline-block}
+.topnav .dropdown > a::after{content:"\00A0\25BE";font-size:10px;color:var(--muted)}
+.topnav .dropdown-menu{position:absolute;left:50%;transform:translateX(-50%);top:100%;margin-top:4px;
+  background:var(--paper);border:1px solid var(--rule);border-radius:5px;padding:6px 0;min-width:240px;
+  box-shadow:0 12px 30px -14px rgba(0,0,0,.3);opacity:0;visibility:hidden;transition:opacity .15s ease;z-index:60}
+.topnav .dropdown:hover .dropdown-menu,.topnav .dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible}
+.topnav .dropdown-menu::before{content:"";position:absolute;top:-6px;left:0;right:0;height:6px}
+.topnav .dropdown-menu a{display:block;margin:0;padding:7px 20px;font-size:14px;color:var(--ink);white-space:nowrap;text-align:center}
+.topnav .dropdown-menu a:hover{color:var(--garnet)}
+@media (max-width:620px){ .topnav .dropdown-menu{min-width:200px} .topnav .dropdown-menu a{font-size:13px} }
+h3.sub:first-of-type{margin-top:0}
+
+/* About: photo floats left, paragraphs flow around it */
+.bio::after{content:"";display:block;clear:both}
+.bio p{margin:0 0 14px;text-align:justify;-webkit-hyphens:none;hyphens:none}
+.bio p:first-of-type{margin-top:0}
+.bio p:last-of-type{margin-bottom:0}
+.bio p.below{clear:left}
+.portrait{
+  float:left;width:220px;aspect-ratio:4/5;object-fit:cover;
+  border-radius:8px;margin:0 32px 14px 0;display:block;
+  box-shadow:0 1px 0 rgba(0,0,0,0.04),0 14px 36px -18px rgba(161,24,51,0.22);
+}
+.portrait.ph{background:radial-gradient(circle at 50% 35%,#efe7e4,#cdbfc0);display:grid;place-items:center}
+.portrait.ph span{font-size:56px;color:#b09ea0}
+
+/* Papers */
+.paper{margin-bottom:18px}
+.paper .title{font-weight:500}
+.paper .meta{color:var(--muted);font-style:italic;font-size:17px;margin-top:2px}
+.paper .extras{margin-top:4px;font-size:15.5px;color:var(--muted)}
+.paper .extras a{font-style:italic}
+/* Publication entries */
+.paper .title .auth{font-weight:400;color:var(--muted)}
+.paper .cite{font-size:17px;color:var(--ink);margin-top:3px;line-height:1.45}
+.paper .cite em{font-style:italic}
+.paper .cite .tag{color:var(--garnet);font-style:italic}
+.paper .ids{font-size:15px;color:var(--muted);margin-top:3px}
+.paper .pub-links{font-size:15px;margin-top:5px}
+.paper .pub-links a{color:var(--ink)}
+.paper .pub-links a:hover{color:var(--garnet)}
+.paper .cov{font-size:14.5px;color:var(--muted);margin-top:5px;line-height:1.5}
+.paper .cov em{font-style:italic}
+#sec-published + .paper, .paper.pub{margin-bottom:24px}
+.badge{
+  display:inline-block;margin-left:9px;vertical-align:middle;white-space:nowrap;
+  font-size:11.5px;font-weight:600;font-style:normal;letter-spacing:0.07em;text-transform:uppercase;
+  color:var(--garnet);background:rgba(161,24,51,0.07);
+  border:1px solid rgba(161,24,51,0.30);border-radius:3px;padding:2px 8px;
+}
+
+/* bare lists (teaching, honors) */
+ul.bare{list-style:none;padding:0;margin:0}
+ul.bare li{margin-bottom:12px}
+.blurb{font-style:italic;color:#3a3a3a;font-size:17px;line-height:1.55;margin-top:6px;padding-left:14px;border-left:2px solid var(--rule)}
+
+/* CV rows */
+.cv-row{display:grid;grid-template-columns:120px 1fr;gap:18px;margin-bottom:14px}
+.cv-row .when{color:var(--muted);font-style:italic}
+.cv-row .what strong{font-weight:600}
+
+/* About: photo and text side by side (home page) */
+.about-row{display:flex;gap:32px;align-items:stretch}
+.about-row .portrait{float:none;margin:0;flex:0 0 220px;width:220px;height:auto;aspect-ratio:auto;object-fit:cover;align-self:stretch}
+.about-row .about-text{flex:1;min-width:0}
+.about-row .about-text p{margin:0 0 14px;text-align:justify;-webkit-hyphens:none;hyphens:none}
+.about-row .about-text p:last-child{margin-bottom:0}
+@media (max-width:560px){
+  .about-row{flex-direction:column;gap:18px}
+  .about-row .portrait{align-self:flex-start;width:100%;max-width:220px;aspect-ratio:4/5}
+  .about-row .about-text p{text-align:left}
+}
+
+/* Embedded PDF (CV page) */
+.cv-actions{margin:-6px 0 18px;font-size:16px}
+.pdf-embed{border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:#f0ece6}
+.pdf-embed iframe{display:block;width:100%;height:900px;border:0}
+@media (max-width:620px){ .pdf-embed iframe{height:70vh} }
+
+/* Justified body text without hyphenation (reusable) */
+.justify{text-align:justify;-webkit-hyphens:none;hyphens:none}
+@media (max-width:560px){ .justify{text-align:left} }
+
+/* Centered book header (Book Project page) */
+.book-head{text-align:center;margin-bottom:26px}
+.book-head .title{font-size:28px;font-weight:600;font-style:normal;line-height:1.2}
+.book-head .meta{font-style:normal}
+.book-head .meta em{font-style:italic}
+.book-head .extras{margin-top:8px}
+.book-head .extras a{font-style:normal}
+
+/* Teaching courses */
+.course{margin:0 0 32px}
+.course:last-child{margin-bottom:0}
+.course h3{font-size:20px;font-weight:600;margin:0 0 8px;line-height:1.3}
+.course h3 .code{color:var(--muted);font-weight:400}
+.course .offered{color:var(--muted);font-style:italic;font-size:16px;margin:8px 0 0}
+
+/* Students placement list */
+.placement .pl-row{display:grid;grid-template-columns:58px 1fr;gap:18px;padding:9px 0;border-top:1px solid var(--rule);line-height:1.5}
+.placement .pl-row:first-child{border-top:0}
+.placement .yr{color:var(--garnet);font-variant-numeric:tabular-nums}
+.placement .pl{color:var(--ink)}
+@media (max-width:560px){ .placement .pl-row{grid-template-columns:1fr;gap:2px} .placement .yr{font-weight:600} }
+
+/* Contact block (home page) */
+.contact-block{line-height:2.05}
+.contact-block .k{display:inline-block;width:78px;color:var(--muted);font-style:italic}
+@media (max-width:620px){ .contact-block .k{width:auto;margin-right:8px} }
+
+footer{margin-top:80px;font-size:14px;color:var(--muted);text-align:center}
+
+@media (max-width:620px){
+  .wrap{padding:28px 20px 100px}
+  .topnav{font-size:15px}
+  .topnav a{margin:0 10px}
+  header h1{font-size:36px}
+  header .aff{font-size:21px}
+  header .contact{font-size:15px;line-height:1.9}
+  h2{font-size:13px;letter-spacing:0.16em}
+  .portrait{float:none;width:100%;max-width:220px;margin:0 auto 18px}
+  .bio p.below{clear:none}
+  .cv-row{grid-template-columns:1fr;gap:2px}
+}
