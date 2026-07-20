@@ -32,6 +32,10 @@ body{
 }
 .topnav a:hover{color:var(--garnet)}
 .topnav a.active{color:var(--garnet);font-weight:600}
+/* Hamburger toggle — hidden on desktop, shown on phones */
+.nav-toggle{display:none;background:none;border:1px solid var(--rule);border-radius:5px;
+  font-family:inherit;font-size:15px;color:var(--ink);cursor:pointer;padding:6px 16px;line-height:1}
+.nav-toggle:hover{color:var(--garnet);border-color:var(--garnet)}
 
 /* Masthead (name / title / contact) */
 header{text-align:center;margin-bottom:12px}
@@ -192,4 +196,19 @@ footer{margin-top:80px;font-size:14px;color:var(--muted);text-align:center}
   .portrait{float:none;width:100%;max-width:220px;margin:0 auto 18px}
   .bio p.below{clear:none}
   .cv-row{grid-template-columns:1fr;gap:2px}
+}
+
+/* Phone nav: collapse links behind a hamburger (☰) toggle */
+@media (max-width:620px){
+  .topnav{padding-bottom:14px;margin-bottom:36px}
+  .nav-toggle{display:inline-block}
+  .nav-links{display:none;margin-top:14px}
+  .topnav.open .nav-links{display:block}
+  .nav-links a{display:block;margin:0;padding:11px 0;font-size:17px}
+  .topnav .dropdown{display:block}
+  .topnav .dropdown > a::after{content:""}            /* drop the ▾ caret on phones */
+  .topnav.open .dropdown-menu{position:static;transform:none;opacity:1;visibility:visible;
+    box-shadow:none;border:0;border-radius:0;padding:0;margin:0;min-width:0;background:none}
+  .topnav.open .dropdown-menu::before{display:none}
+  .topnav.open .dropdown-menu a{padding:8px 0;font-size:15px;color:var(--muted)}
 }
