@@ -159,7 +159,7 @@ ul.bare li{margin-bottom:12px}
 .course .offered{color:var(--muted);font-style:italic;font-size:16px;margin:8px 0 0}
 
 /* Students intro */
-.students-intro{margin:0 0 8px;max-width:66ch}
+.students-intro{margin:0 0 34px;max-width:66ch}
 
 /* Students placement list */
 .placement .pl-row{display:grid;grid-template-columns:58px 1fr;gap:20px;padding:12px 0;border-top:1px solid var(--rule);line-height:1.55}
