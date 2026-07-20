@@ -182,10 +182,12 @@ ul.bare li{margin-bottom:12px}
 .placement a:hover{color:var(--garnet);border-bottom-color:var(--garnet)}
 @media (max-width:560px){ .placement .pl-row{grid-template-columns:1fr;gap:2px} .placement .yr{font-weight:600} }
 
-/* Contact block (home page) */
-.contact-block{line-height:2.05}
-.contact-block .k{display:inline-block;width:78px;color:var(--muted);font-style:italic}
-@media (max-width:620px){ .contact-block .k{width:auto;margin-right:8px} }
+/* Contact block (home page) — label/value columns so the address aligns under "9262" */
+.contact-block{line-height:1.65}
+.contact-block .row{display:flex;gap:10px;margin-bottom:12px}
+.contact-block .row:last-child{margin-bottom:0}
+.contact-block .k{flex:0 0 72px;color:var(--muted);font-style:italic}
+.contact-block .v{flex:1;min-width:0}
 
 footer{margin-top:80px;font-size:14px;color:var(--muted);text-align:center}
 
